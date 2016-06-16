@@ -4,6 +4,8 @@ import { belongsTo, hasMany } from 'ember-data/relationships';
 
 export default Model.extend({
   name: attr('string'),
+  startDate: attr('date'),
+  endDate: attr('date'),
   user: belongsTo('user'),
   listItems: hasMany('list-item')
 });

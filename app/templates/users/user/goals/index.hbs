@@ -4,6 +4,9 @@
 
 <ul>
 {{#each model.goals as |goal|}}
-  <li>{{link-to goal.name 'users.user.goals.goal' goal}}</li>
+  {{#unless goal.isNew }}
+  <li>{{link-to goal.name 'users.user.goals.goal' goal}}
+    | <button {{action "delete" goal}} class="btn btn-primary">Delete</button></li>
+  {{/unless}}
 {{/each}}
 </ul>
