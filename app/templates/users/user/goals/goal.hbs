@@ -1,6 +1,8 @@
 {{outlet}}
-
+<br> <br>
 {{model.name}} <br>
+<ul>
 {{#each model.listItems as |list|}}
-  {{list.description}}
+  <li>{{list.description}}</li>
 {{/each}}
+</ul>

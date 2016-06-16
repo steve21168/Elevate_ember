@@ -9,7 +9,8 @@ Router.map(function() {
   this.route('users', function() {
     this.route('user', { path: ':user_id'}, function() {
       this.route('goals', function() {
-        this.route('goal', {path: ':goal_id'})
+        this.route('goal', {path: ':goal_id'}),
+        this.route('new')
       })
     })
   });
