@@ -5,8 +5,7 @@
 
 {{#each model.goals as |goal|}}
   {{goal.name}}
-{{/each}}
-
-{{#each model.list_items as |list_item|}}
-  {{list_item.description}}
+  {{#each goal.listItems as |list|}}
+    {{list.descripton}}
+  {{/each}}
 {{/each}}

@@ -1,0 +1,3 @@
+beef
+{{outlet}}
+ {{model}}
