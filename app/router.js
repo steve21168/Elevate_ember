@@ -10,7 +10,9 @@ Router.map(function() {
     this.route('user', { path: ':user_id'})
   });
 
-  this.route('goals')
+  this.route('goals', function() {
+    this.route('goal', { path: ':goal_id'})
+  })
 });
 
 export default Router;
