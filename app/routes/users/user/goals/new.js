@@ -2,8 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    let user_id = this.modelFor('users.user').id
-    let user = this.store.peekRecord('user', user_id)
+    let user = this.modelFor('users.user')
+    // let user = this.store.peekRecord('user', user_id)
     let goal = this.store.createRecord('goal', {
       user: user,
     })
@@ -11,8 +11,8 @@ export default Ember.Route.extend({
   },
   actions: {
     save: function() {
-      let goal = this.modelFor('users.user.goals.new')
-      goal.save().then((response) => {
+      let goal = this.modelFor(this.routeName)
+      goal.save().then(() => {
         this.transitionTo('users.user.goals')
       })
     }
