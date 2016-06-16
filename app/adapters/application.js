@@ -1,6 +1,5 @@
-import ActiveModelAdapter from 'active-model-adapter';
-
-export default ActiveModelAdapter.extend({
-  host: "http://localhost:3000",
-  namespace: "api/v1"
-})
+import JSONAPIAdapter from 'ember-data/adapters/json-api'
+export default JSONAPIAdapter.extend({
+ namespace: "api/v1",
+ host: "http://localhost:3000"
+});

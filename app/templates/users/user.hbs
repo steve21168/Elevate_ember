@@ -2,3 +2,8 @@
 
 {{model.name}}
 {{model.email}}
+
+{{#each model.goals as |goal|}}
+  {{goal.name}}
+  {{goal.description}}
+{{/each}}
