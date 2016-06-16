@@ -1,11 +1,13 @@
-{{outlet}}
+HOMEPAGE <br>
 
-{{model.name}} <br>
+<!-- {{model.name}} <br>
 {{model.email}} <br>
 
 {{#each model.goals as |goal|}}
   {{goal.name}}
-  {{#each goal.listItems as |list|}}
-    {{list.descripton}}
-  {{/each}}
-{{/each}}
+{{/each}} -->
+
+{{link-to 'Goals' "users.user.goals" model}} | {{link-to 'Home' "users.user" model}}
+<br>
+
+{{outlet}}

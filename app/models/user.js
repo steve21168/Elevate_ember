@@ -6,6 +6,5 @@ export default Model.extend({
   name: attr('string'),
   email: attr('string'),
   avatar: attr('string'),
-  goals: hasMany('goal'),
-  listItems: hasMany('listItems')
+  goals: hasMany('goal')
 });
