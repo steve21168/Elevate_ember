@@ -5,5 +5,5 @@ import { belongsTo, hasMany } from 'ember-data/relationships';
 export default Model.extend({
   name: attr('string'),
   user: belongsTo('user'),
-  listItems: hasMany('list_item')
+  listItems: hasMany('list-item')
 });

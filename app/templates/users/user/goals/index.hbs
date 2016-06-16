@@ -1,0 +1,5 @@
+{{outlet}}
+
+{{#each model.goals as |goal|}}
+  {{link-to goal.name 'users.user.goals.goal' goal}}
+{{/each}}
