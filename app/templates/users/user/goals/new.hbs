@@ -1,4 +1,7 @@
-<br><br>
-Name: {{input id="name" value=newName}}
+ato<br><br>
+<form class="new-form" {{action 'save' on='submit'}}>
+  <label for="name">Name:</label>
+   {{input id="name" value=model.name}}
 
-<button id="submit" class="btn btn-submit" {{action 'save' goal}}>Save</button>
+  <button id="submit" class="btn btn-primary" {{action 'save' model}}>Save</button>
+</form>
