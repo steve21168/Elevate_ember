@@ -1,5 +1,9 @@
 {{outlet}}
 
+| {{link-to 'New Goal' 'users.user.goals.new'}}
+
+<ul>
 {{#each model.goals as |goal|}}
-  {{link-to goal.name 'users.user.goals.goal' goal}}
+  <li>{{link-to goal.name 'users.user.goals.goal' goal}}</li>
 {{/each}}
+</ul>
