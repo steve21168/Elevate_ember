@@ -10,11 +10,23 @@ export default Ember.Service.extend({
     return new RSVP.Promise((resolve, reject) => {
       const token = this.get('session.data.authenticated.token');
       if (!Ember.isEmpty(token)) {
-        return this.get('store').findRecord('user', 'current-user').then((user) => {
-          this.set('account', user);
-          resolve();
-        }, reject);
-      } else {
+        // return this.get('store').findRecord('user', 'current-user').then((user) => {
+        //   this.set('account', user);
+        //   resolve();
+        // }, reject);
+        $.ajax({
+        headers: {'Authorization': `Bearer ${token}`},
+        url: 'http://localhost:3000/api/v1/users/current-user',
+        method: 'GET', dataType: 'json',
+        success: function(user){
+           that.set('account', user);
+           resolve()
+        },
+        failure: function(){
+          reject()
+        }})
+      }
+      else {
         resolve();
       }
     });
