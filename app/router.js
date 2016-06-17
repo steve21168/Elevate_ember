@@ -14,6 +14,8 @@ Router.map(function() {
       })
     })
   });
+
+  this.route('login')
   // this.route('goals', function() {
   //   this.route('goal', { path: ':goal_id'})
   //   })

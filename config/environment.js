@@ -18,8 +18,13 @@ module.exports = function(environment) {
       // when it is created
     }
   };
+  ENV['ember-simple-auth'] = {
+    authorizer: 'authorizer:custom',
+    routeAfterAuthentication: '/users/:user_id'
+  }
 
   if (environment === 'development') {
+    ENV.host = 'http://localhost:3000';
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
