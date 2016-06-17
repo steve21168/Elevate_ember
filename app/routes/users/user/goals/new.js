@@ -13,7 +13,7 @@ export default Ember.Route.extend({
     save: function() {
       let goal = this.modelFor(this.routeName)
       goal.save().then(() => {
-        this.transitionTo('users.user.goals')
+        this.transitionTo('users.user.goals.goal', goal)
       })
     }
   }
