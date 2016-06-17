@@ -7,9 +7,12 @@ export default Ember.Controller.extend({
     authenticate: function() {
       var credentials = this.getProperties('email', 'password'),
         authenticator = 'authenticator:jwt';
-      this.get('session').authenticate(authenticator, credentials).catch((reason)=>{
+      var self = this;
+      this.get('session').authenticate(authenticator, credentials).then(function(user) {
+        self.transitionToRoute('goals')
+      }).catch((reason)=>{
         this.set('errorMessage', reason.error || reason);
-      });
+      })
     }
   }
 });

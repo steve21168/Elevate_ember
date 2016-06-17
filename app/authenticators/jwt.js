@@ -35,6 +35,7 @@ export default Base.extend({
         const { jwt } = response;
         run(() => {
           resolve({
+            // ESA code to put the token in localStorage in this format {token: alsdkfjaoiejfasldkfjoieaj.asldkfjaei.ajsdkfeo}
             token: jwt
           });
         });

@@ -1,5 +1,10 @@
 
 <div class="container">
+  {{link-to 'Goals' "goals"}} | <a href="#" {{action 'invalidateSession'}}>Log out</a>
+
   {{outlet}}
-  
+  <!-- <p {{action 'invalidateSession'}}>
+    logout
+  </p> -->
+
 </div>
