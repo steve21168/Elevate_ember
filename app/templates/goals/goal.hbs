@@ -6,3 +6,8 @@
   <li>{{list.description}}</li>
 {{/each}}
 </ul>
+<br><br>
+<button class="btn btn-default" {{action "addListItem"}}> Create List Item </button> <br><br>
+{{#each listItems as |listItem|}}
+  {{list-item item=listItem }}
+{{/each}}

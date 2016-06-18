@@ -6,5 +6,6 @@ export default Model.extend({
   name: attr('string'),
   email: attr('string'),
   avatar: attr('string'),
+  password: attr('string'),
   goals: hasMany('goal')
 });
