@@ -1,12 +1,11 @@
-{{outlet}}
-
-| {{link-to 'New Goal' 'goals.new'}}
-
-<ul>
-{{#each model as |goal|}}
-  {{#unless goal.isNew }}
-  <li>{{link-to goal.name 'goals.goal' goal}}
-    | <button {{action "delete" goal}} class="btn btn-primary">Delete</button></li>
-  {{/unless}}
-{{/each}}
-</ul>
+<div class="center">
+  <ul>
+  {{#each model as |goal|}}
+    {{#unless goal.isNew }}
+    <li><h2>{{link-to goal.name 'goals.goal' goal}}
+     <button {{action "delete" goal}} class="btn btn-primary">Delete</button></h2></li>
+    {{/unless}}
+  {{/each}}
+  </ul>
+  {{link-to "New Goal" 'goals.new'}}
+</div>
