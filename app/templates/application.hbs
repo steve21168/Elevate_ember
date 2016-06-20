@@ -1,10 +1,22 @@
+<body>
 
-<div class="container">
-  {{link-to 'Goals' "goals"}} | {{link-to 'Sign Up' 'users.new'}} | {{link-to "Log In" 'login'}} | <a href="#" {{action 'invalidateSession'}}>Log out</a>
+{{#if session.isAuthenticated}}
+  <div class="left-drop">
+    {{#bs-dropdown}}
+    {{#bs-dropdown-button}}❈{{/bs-dropdown-button}}
+    {{#bs-dropdown-menu}}
+    <li>{{#link-to "goals"}}All Goals{{/link-to}}</li>
+    <li>{{#link-to "goals.new"}}New Goal{{/link-to}}</li>
+    <li>{{#link-to "root"}}Home{{/link-to}}</li>
+    {{/bs-dropdown-menu}}
+    {{/bs-dropdown}}
+  </div>
 
-  {{outlet}}
-  <!-- <p {{action 'invalidateSession'}}>
-    logout
-  </p> -->
+  <div class="right-drop">
+    <button><a href="#" {{action 'invalidateSession'}}>Log out</a></button>
+  </div>
+{{/if}}
 
-</div>
+    {{outlet}}
+
+</body>

@@ -1,13 +1,17 @@
-<form {{action 'create' on='submit'}}>
-  <label>Name:</label> <br>
-  {{input id='name' value=model.name}} <br>
-  <label>Email:</label> <br>
-  {{input id='email' value=model.email}} <br>
-  <label>Password:</label> <br>
-  {{input type='password' value=model.password}} <br>
-  <label>Password Confirmation:</label> <br>
-  {{input type='password' value=model.password_confirmation}} <br>
-  <label>Avatar:</label> <br>
-  {{input id='avatar' value=model.avatar}} <br> <br>
-  <button type="submit" class="btn btn-primary">Create User</button> <br>
-</form>
+<div class="center">
+  <form {{action 'create' on='submit'}}>
+    <label>Name:</label> <br>
+    {{input id='name' value=model.name}} <br>
+    <label>Email:</label> <br>
+    {{input id='email' value=model.email}} <br>
+    <label>Password:</label> <br>
+    {{input type='password' value=model.password}} <br>
+    <label>Password Confirmation:</label> <br>
+    {{input type='password' value=model.password_confirmation}} <br>
+    <label>Avatar:</label> <br>
+    {{input id='avatar' value=model.avatar}} <br> <br>
+    <button type="submit" class="btn btn-primary">Create User</button> <br>
+  </form>
+  <br>
+    {{link-to 'Log In' 'login'}}
+</div>

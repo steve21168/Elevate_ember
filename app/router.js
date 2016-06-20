@@ -6,6 +6,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+
+  this.route('root', {path: '/'})
+
   this.route('users', function() {
     this.route('user', { path: ':user_id'}),
     this.route('new', {path: '/registration'})

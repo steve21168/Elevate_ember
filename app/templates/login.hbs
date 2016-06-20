@@ -1,9 +1,14 @@
-<br>Log In to your account! <br> <br>
+<div class="center">
+  <br>Log In to your account! <br> <br>
 
-<form {{action 'authenticate' on="submit"}}>
-  <label for="email">Email</label> <br>
+  <form {{action 'authenticate' on="submit"}}>
+    <label for="email">Email</label> <br>
     {{input id="email" value=email}} <br>
-  <label for="password">Password</label> <br>
-    {{input type="password" value=password}} <br> <br>
-  <button class="btn btn-default" type="submit">Log In</button>
-</form>
+    <label for="password">Password</label> <br>
+    {{input id="password" type="password" value=password}} <br> <br>
+    <button class="btn btn-default" type="submit">Log In</button>
+  </form>
+<br>
+
+  {{link-to 'Sign Up' 'users.new'}}
+</div>
