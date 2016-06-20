@@ -1,0 +1,30 @@
+body {
+  background-color: transparent;
+  color: #fff;
+}
+
+.container {
+  background-color: transparent;
+}
+
+a {
+  color: #fff;
+}
+
+#password {
+  color: #000;
+}
+
+#email {
+  color: #000;
+}
+
+.center-quote {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #000;
+  text-align: center;
+}

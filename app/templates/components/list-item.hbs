@@ -1,2 +1,5 @@
-<label for="">Description</label>
-{{input value=item.description}}
+<form {{action 'save' on="submit"}}>
+  <label for="">Description</label>
+  {{input value=item.description}}
+  <button type="submit">Save List Item</button>
+</form>
