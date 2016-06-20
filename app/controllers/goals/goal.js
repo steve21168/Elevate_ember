@@ -2,6 +2,19 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   listItems: [],
+  // startDate: Ember.computed("startDate", {
+  //   get(key){
+  //     debugger
+  //   },
+  //   set(key, value){
+  //     let formattedDate = (new Date(value)).toISOString()
+  //     this.get('model').set('startDate', formattedDate)
+  //   }
+  // }),
+  // startDate: function() {
+  //   return Date.now()
+  // },
+  endDate: Date.now(),
   actions: {
     addListInput(){
       this.get('listItems').pushObject(this.get('model.listItems').createRecord())
@@ -17,6 +30,7 @@ export default Ember.Controller.extend({
       listItems.clear()
     },
     completed(item){
+      debugger
       item.toggleProperty('completed')
       item.save()
     },

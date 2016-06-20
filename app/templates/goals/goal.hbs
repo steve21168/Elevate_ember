@@ -1,40 +1,13 @@
 {{outlet}}
 <div class="center">
-  <h1>{{model.name}} {{model.startDate}}:{{model.endDate}}</h1> <br>
+  <h1>{{model.name}}</h1> <br>
 
-  <h3>In progress</h3>
-  <ul>
-    {{#each model.listItems as |list|}}
-      {{#unless list.isNew }}
-        {{#unless list.completed}}
-          <li>
-            {{list.description}}
-            <div class="glyphicon glyphicon-ok" {{action "completed" list}}></div>
-            <div class="glyphicon glyphicon-trash" {{action "deleteItems" list}}></div>
-          </li>
-        {{/unless}}
-      {{/unless}}
-    {{/each}}
-  </ul>
+  {{in-progress listItems=model.listItems switchComplete=(action "completed") removeItem=(action "deleteItems")}}
   <br>
-
-  <h3>Completed</h3>
-  <ul>
-      {{#each model.listItems as |list|}}
-        {{#unless list.isNew }}
-          {{#if list.completed}}
-            <li>
-              {{list.description}}
-              <div class="glyphicon glyphicon-ok" {{action "completed" list}}></div>
-              <div class="glyphicon glyphicon-trash" {{action "deleteItems" list}}></div>
-            </li>
-          {{/if}}
-        {{/unless}}
-      {{/each}}
-  </ul>
-
+  {{now-completed listItems=model.listItems switchComplete=(action "completed") removeItem=(action "deleteItems")}}
 
   <br><br>
+
   <button class="btn btn-default" {{action "addListInput"}}> Create List Item </button> <br><br>
   {{#each listItems as |listItem|}}
     {{list-item item=listItem }}
