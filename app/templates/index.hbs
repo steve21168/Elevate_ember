@@ -3,9 +3,14 @@
     <h2>{{random-quote quote=model}}</h2>
 
     {{#unless session.isAuthenticated}}
-      <button type="submit" class="btn btn-default">{{link-to "Log In" 'login'}}</button>
-      <button type="submit" class="btn btn-default">{{link-to 'Sign Up' 'users.new'}}</button>
+      <button class="btn btn-default">{{link-to "Log In" 'login'}}</button>
+      <button class="btn btn-default">{{link-to 'Sign Up' 'users.new'}}</button>
     {{/unless}}
+
+    {{#if session.isAuthenticated}}
+      <button class="btn btn-default">{{link-to 'All Goals' 'goals'}}</button>
+      <button class="btn btn-default">{{link-to 'New Goal' 'goals.new'}}</button>
+    {{/if}}
 
   </div>
 </div>

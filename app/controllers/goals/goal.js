@@ -4,7 +4,6 @@ export default Ember.Controller.extend({
   listItems: [],
   // startDate: Ember.computed("startDate", {
   //   get(key){
-  //     debugger
   //   },
   //   set(key, value){
   //     let formattedDate = (new Date(value)).toISOString()
@@ -30,7 +29,6 @@ export default Ember.Controller.extend({
       listItems.clear()
     },
     completed(item){
-      debugger
       item.toggleProperty('completed')
       item.save()
     },

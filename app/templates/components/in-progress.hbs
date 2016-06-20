@@ -1,12 +1,12 @@
-<h3>In progress</h3>
+<h2>In progress</h2>
 <ul>
   {{#each listItems as |list|}}
     {{#unless list.isNew }}
       {{#unless list.completed}}
         <li>
-          {{list.description}}
-          <div class="glyphicon glyphicon-ok" {{action "completed" list}}></div>
-          <div class="glyphicon glyphicon-trash" {{action "deleteItems" list}}></div>
+          <h4>{{list.description}}
+          <div class="glyphicon glyphicon-ok-circle" {{action "completed" list}}></div>
+          <div class="glyphicon glyphicon-remove-circle" {{action "deleteItems" list}}></div></h4>
         </li>
       {{/unless}}
     {{/unless}}

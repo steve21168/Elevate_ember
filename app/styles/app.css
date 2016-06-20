@@ -26,6 +26,8 @@ body {
   padding: 50px;
   text-align: center;
   border-radius: 5%;
+  min-width: 50%;
+  overflow: scroll;
 }
 
 .left-drop {
@@ -58,12 +60,32 @@ body {
   border-radius: 50%;
 }
 
+.glyphicon-ok-circle:hover {
+  color: green;
+}
+
+.glyphicon-remove-circle:hover {
+  color: red;
+}
+
+h4.completed .glyphicon-ok-circle {
+  color: green;
+}
+
+h4.completed .glyphicon-remove-circle {
+  color: red;
+}
+
 a.right-drop {
   color: #000;
 }
 
 a {
   color: #000;
+}
+
+a:hover {
+  color: rgb(0, 133, 138);
 }
 
 ul {
