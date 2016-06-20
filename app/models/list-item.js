@@ -4,5 +4,6 @@ import { belongsTo, hasMany } from 'ember-data/relationships';
 
 export default Model.extend({
   description: attr('string'),
-  goal: belongsTo('goal')
+  goal: belongsTo('goal'),
+  completed: attr('boolean')
 });
