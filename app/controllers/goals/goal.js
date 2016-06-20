@@ -30,12 +30,16 @@ export default Ember.Controller.extend({
       listItems.clear()
     },
     completed(item){
-      debugger
       item.toggleProperty('completed')
       item.save()
     },
     deleteItems(item) {
-      let remove = confirm('Are you sure you\'d like to delete this item?')
+      if (item.completed) {
+        var remove = confirm(`Are you sure you'd like to delete this item?`)
+      } else {
+        var remove = confirm(`Pain is temporary. Quitting lasts forever.  Are you sure you want to quit and remove this item before it's completed?`)
+      }
+
       if (remove) {
         item.destroyRecord()
       }
