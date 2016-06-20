@@ -1,0 +1,14 @@
+<h3>Completed</h3>
+<ul>
+    {{#each listItems as |list-item|}}
+      {{#unless list-item.isNew }}
+        {{#if list-item.completed}}
+          <li>
+            {{list-item.description}}
+            <div class="glyphicon glyphicon-ok" {{action "completed" list-item}}></div>
+            <div class="glyphicon glyphicon-trash" {{action "deleteItems" list-item}}></div>
+          </li>
+        {{/if}}
+      {{/unless}}
+    {{/each}}
+</ul>
