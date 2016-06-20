@@ -24,6 +24,7 @@ body {
   color: #000;
   padding: 50px;
   text-align: center;
+  border-radius: 25px;
 }
 
 .left-drop {

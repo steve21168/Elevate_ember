@@ -7,13 +7,13 @@
     {{#bs-dropdown-menu}}
     <li>{{#link-to "goals"}}All Goals{{/link-to}}</li>
     <li>{{#link-to "goals.new"}}New Goal{{/link-to}}</li>
-    <li>{{#link-to "root"}}Home{{/link-to}}</li>
+    <li>{{#link-to "index"}}Home{{/link-to}}</li>
     {{/bs-dropdown-menu}}
     {{/bs-dropdown}}
   </div>
 
   <div class="right-drop">
-    <button><a href="#" {{action 'invalidateSession'}}>Log out</a></button>
+    <button class="btn btn-default"><a href="#" {{action 'invalidateSession'}}>Log out</a></button>
   </div>
 {{/if}}
 
