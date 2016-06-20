@@ -1,13 +1,14 @@
 {{outlet}}
-<br> <br>
-{{model.name}} <br>
-<ul>
-{{#each model.listItems as |list|}}
-  <li>{{list.description}}</li>
-{{/each}}
-</ul>
-<br><br>
-<button class="btn btn-default" {{action "addListItem"}}> Create List Item </button> <br><br>
-{{#each listItems as |listItem|}}
+<div class="center">
+  {{model.name}} <br>
+  <ul>
+    {{#each model.listItems as |list|}}
+    <li>{{list.description}}</li>
+    {{/each}}
+  </ul>
+  <br><br>
+  <button class="btn btn-default" {{action "addListItem"}}> Create List Item </button> <br><br>
+  {{#each listItems as |listItem|}}
   {{list-item item=listItem }}
-{{/each}}
+  {{/each}}
+</div>
