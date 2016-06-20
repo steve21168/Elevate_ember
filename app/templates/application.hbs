@@ -1,5 +1,6 @@
 <body>
 
+{{#if session.isAuthenticated}}
   <div class="left-drop">
     {{#bs-dropdown}}
     {{#bs-dropdown-button}}❈{{/bs-dropdown-button}}
@@ -14,7 +15,7 @@
   <div class="right-drop">
     <button><a href="#" {{action 'invalidateSession'}}>Log out</a></button>
   </div>
-
+{{/if}}
 
 
     {{outlet}}
