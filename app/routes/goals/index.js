@@ -5,8 +5,12 @@ export default Ember.Route.extend({
     return this.store.findAll('goal')
   },
   actions: {
-    delete: (goal) => {
+    delete(goal)  {
       goal.destroyRecord()
+    },
+    completeGoal(goal) {
+      goal.toggleProperty("active")
+      goal.save()
     }
   }
 });
