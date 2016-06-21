@@ -1,11 +1,13 @@
 <div class="center">
+  <h1>My Goals</h1> <br>
   <ul>
   {{#each model as |goal|}}
     {{#unless goal.isNew }}
     <li><h2>{{link-to goal.name 'goals.goal' goal}}
-     <button {{action "delete" goal}} class="btn btn-primary">Delete</button></h2></li>
+     <div class="glyphicon glyphicon-remove-circle" {{action "delete" goal}}></div></h2></li>
+
     {{/unless}}
   {{/each}}
-  </ul>
-  {{link-to "New Goal" 'goals.new'}}
+</ul> <br>
+  <h4>{{link-to "New Goal" 'goals.new'}}</h4>
 </div>

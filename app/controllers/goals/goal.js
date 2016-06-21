@@ -33,10 +33,10 @@ export default Ember.Controller.extend({
       item.save()
     },
     deleteItems(item) {
-      if (item.completed) {
-        var remove = confirm(`Are you sure you'd like to delete this item?`)
+      if (item.get('completed')) {
+        var remove = confirm(`Are you sure you want to delete this item?`)
       } else {
-        var remove = confirm(`Pain is temporary. Quitting lasts forever.  Are you sure you want to quit and remove this item before it's completed?`)
+        var remove = confirm(`Pain is temporary. Quitting lasts forever.  Are you sure you want remove this item before it's complete?`)
       }
 
       if (remove) {

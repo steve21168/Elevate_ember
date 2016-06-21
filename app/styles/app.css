@@ -27,21 +27,22 @@ body {
   text-align: center;
   border-radius: 5%;
   min-width: 50%;
+  max-height: 85%;
   overflow: scroll;
 }
 
 .left-drop {
-  text-align: left;
   display: inline;
+  float: left;
   color: #000;
-  margin: 1px;
+  margin: 5px;
 }
 
 .right-drop {
   display: inline;
   text-align: right;
   float: right;
-  margin: 1px;
+  margin: 5px;
 }
 
 .bottom-right {
@@ -68,6 +69,10 @@ body {
   color: red;
 }
 
+.button {
+  font-family: 'Poiret One', sans-serif;
+}
+
 h4.completed .glyphicon-ok-circle {
   color: green;
 }
@@ -82,6 +87,7 @@ a.right-drop {
 
 a {
   color: #000;
+  font-family: 'Poiret One', sans-serif;
 }
 
 a:hover {
