@@ -14,10 +14,11 @@
   {{/each}}
 
   {{#if listItems}}
+  <br>
     <button class="btn btn-default" {{action "removeListInput"}}> Remove Task </button>
     <button class="btn btn-default" {{action "saveItems"}}>Save Tasks</button>
   {{/if}}
-<br>
-  <button class="btn btn-danger" {{action 'delete' model}}>Delete Goal</button>
+<br> <br>
   <button class="btn btn-default">{{link-to 'All goals' 'goals'}}</button>
+  <button class="btn btn-danger" {{action 'delete' model}}>Delete Goal</button>
 </div>

@@ -73,6 +73,10 @@ body {
   font-family: 'Poiret One', sans-serif;
 }
 
+h1.underline {
+  text-decoration: underline;
+}
+
 h4.completed .glyphicon-ok-circle {
   color: green;
 }

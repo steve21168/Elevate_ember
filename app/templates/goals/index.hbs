@@ -1,13 +1,27 @@
 <div class="center">
-  <h1>My Goals</h1> <br>
-  <ul>
+  <h1 class="underline"><strong>My Goals</strong></h1>
   {{#each model as |goal|}}
     {{#unless goal.isNew }}
-    <li><h2>{{link-to goal.name 'goals.goal' goal}}
-     <div class="glyphicon glyphicon-remove-circle" {{action "delete" goal}}></div></h2></li>
-
+      {{#if goal.active}}
+        <h2>
+          {{link-to goal.name 'goals.goal' goal}}
+          <div {{action "completeGoal" goal}} class="glyphicon glyphicon-ok-circle"></div>
+        </h2>
+      {{/if}}
     {{/unless}}
   {{/each}}
-</ul> <br>
-  <h4>{{link-to "New Goal" 'goals.new'}}</h4>
+  <br> <br>
+  <button class="btn btn-default">{{link-to "New Goal" 'goals.new'}}</button> <button {{action "showFinishedGoals"}} class="btn btn-default">Finished Goals</button>
+
+<br> <br>
+
+  {{#if isCompleted }}
+    {{#each model as |goal|}}
+      {{#unless goal.active}}
+        <h4>{{goal.name}}
+        <div {{action "completeGoal" goal}} class="glyphicon glyphicon-ok-circle"></div>
+        <div {{action "delete" goal}} class="glyphicon glyphicon-remove-circle">Delete</div></h4>
+      {{/unless}}
+    {{/each}}
+  {{/if}}
 </div>
