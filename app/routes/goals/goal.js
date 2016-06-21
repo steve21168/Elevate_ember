@@ -9,6 +9,11 @@ export default Ember.Route.extend({
       model.destroyRecord().then(function() {
         this.transitionTo('goals');
       }.bind(this));
+    },
+    completeGoal(model) {
+      model.toggleProperty("active")
+      model.save()
+      this.transitionTo('goals')
     }
   }
 });

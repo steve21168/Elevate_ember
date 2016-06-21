@@ -1,11 +1,6 @@
 {{outlet}}
 <div class="center">
-  <div class="underline">
-    <h1>{{model.name}}</h1>
-  </div>
-  <div class="glyphicon glyphicon-pencil"></div>
-  <div class="glyphicon glyphicon-ok-circle"></div>
-  <div class="glyphicon glyphicon-remove-circle" {{action 'delete' model}}></div>
+  {{edit-goal saveChange=(action 'update') goal=model}}
 <br>
   {{in-progress listItems=model.listItems switchComplete=(action "completed") removeItem=(action "deleteItems")}}
   <br>
