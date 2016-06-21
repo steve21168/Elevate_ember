@@ -13,6 +13,12 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
     },
     newGoal() {
       this.transitionTo('goals.new')
+    },
+    logIn() {
+      this.transitionTo('login')
+    },
+    signUp(){
+      this.transitionTo('users.new')
     }
   }
 })
