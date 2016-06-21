@@ -17,10 +17,12 @@
 
   {{#if isCompleted }}
     {{#each model as |goal|}}
-      {{#unless goal.active}}
-        <h4>{{goal.name}}
-        <div {{action "completeGoal" goal}} class="glyphicon glyphicon-ok-circle"></div>
-        <div {{action "delete" goal}} class="glyphicon glyphicon-remove-circle">Delete</div></h4>
+      {{#unless goal.isNew}}
+        {{#unless goal.active}}
+          <h4>{{goal.name}}
+          <div {{action "completeGoal" goal}} class="glyphicon glyphicon-ok-circle"></div>
+          <div {{action "delete" goal}} class="glyphicon glyphicon-remove-circle">Delete</div></h4>
+        {{/unless}}
       {{/unless}}
     {{/each}}
   {{/if}}
