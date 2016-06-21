@@ -45,6 +45,16 @@ export default Ember.Controller.extend({
     },
     update(goal) {
       goal.save();
+    },
+    completeGoal(model) {
+      model.toggleProperty("active")
+      model.save()
+      this.transitionToRoute('goals')
+    },
+    delete(model) {
+      model.destroyRecord().then(function() {
+        this.transitionToRoute('goals');
+      }.bind(this));
     }
   }
 });

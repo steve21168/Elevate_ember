@@ -7,7 +7,7 @@
   </form>
 {{else}}
   <h1 class="underline">{{goal.name}}</h1>
-  <div class="glyphicon glyphicon-pencil" {{action 'edit' model}}></div>
-  <div class="glyphicon glyphicon-ok-circle" {{action 'completeGoal' model}}></div>
-  <div class="glyphicon glyphicon-remove-circle" {{action 'delete' model}}></div>
+  <div class="glyphicon glyphicon-pencil" {{action 'edit' goal}}></div>
+  <div class="glyphicon glyphicon-ok-circle" {{action 'completeGoal' goal}}></div>
+  <div class="glyphicon glyphicon-remove-circle" {{action 'delete' goal}}></div>
 {{/if}}

@@ -8,6 +8,12 @@ export default Ember.Component.extend({
     submit() {
       this.toggleProperty('isEditing');
       this.attrs.saveChanges(this.get('goal'));
+    },
+    completeGoal() {
+      this.attrs.completeGoal(this.get('goal'))
+    },
+    delete() {
+      this.attrs.delete(this.get('goal'))
     }
   }
 });

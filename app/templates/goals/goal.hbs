@@ -1,6 +1,6 @@
 {{outlet}}
 <div class="center">
-  {{edit-goal saveChange=(action 'update') goal=model}}
+  {{edit-goal saveChanges=(action 'update') completeGoal=(action 'completeGoal') delete=(action 'delete') goal=model}}
 <br>
   {{in-progress listItems=model.listItems switchComplete=(action "completed") removeItem=(action "deleteItems")}}
   <br>
