@@ -52,9 +52,12 @@ export default Ember.Controller.extend({
       this.transitionToRoute('goals')
     },
     delete(model) {
-      model.destroyRecord().then(function() {
-        this.transitionToRoute('goals');
-      }.bind(this));
+      var remove = confirm(`Are you sure you want to delete this goal?`)
+      if (remove) {
+        model.destroyRecord().then(function() {
+          this.transitionToRoute('goals');
+        }.bind(this));
+      }
     }
   }
 });
