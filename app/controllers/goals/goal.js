@@ -42,7 +42,9 @@ export default Ember.Controller.extend({
       if (remove) {
         item.destroyRecord()
       }
+    },
+    update(goal) {
+      goal.save();
     }
-
   }
 });

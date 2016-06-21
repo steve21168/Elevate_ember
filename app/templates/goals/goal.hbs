@@ -1,7 +1,7 @@
 {{outlet}}
 <div class="center">
-  <h1>{{model.name}}</h1> <br>
-
+  {{edit-goal saveChange=(action 'update') goal=model}}
+<br>
   {{in-progress listItems=model.listItems switchComplete=(action "completed") removeItem=(action "deleteItems")}}
   <br>
   {{now-completed listItems=model.listItems switchComplete=(action "completed") removeItem=(action "deleteItems")}}
@@ -20,5 +20,4 @@
   {{/if}}
 <br> <br>
   <button class="btn btn-default">{{link-to 'All goals' 'goals'}}</button>
-  <button class="btn btn-danger" {{action 'delete' model}}>Delete Goal</button>
 </div>

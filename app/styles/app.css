@@ -69,6 +69,10 @@ body {
   color: red;
 }
 
+.glyphicon-pencil:hover {
+  color: rgb(255, 204, 102);
+}
+
 .button {
   font-family: 'Poiret One', sans-serif;
 }
