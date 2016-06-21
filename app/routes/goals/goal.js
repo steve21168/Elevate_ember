@@ -5,6 +5,8 @@ export default Ember.Route.extend({
     return this.store.findRecord('goal', params.goal_id )
   },
   actions: {
-    
+    showGoals() {
+      this.transitionTo('goals')
+    }
   }
 });
