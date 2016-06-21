@@ -11,6 +11,9 @@ export default Ember.Route.extend({
     completeGoal(goal) {
       goal.toggleProperty("active")
       goal.save()
+    },
+    newGoal() {
+      this.transitionTo('goals.new')
     }
   }
 });

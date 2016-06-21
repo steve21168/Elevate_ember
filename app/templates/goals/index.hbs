@@ -11,7 +11,7 @@
     {{/unless}}
   {{/each}}
   <br> <br>
-  <button class="btn btn-default">{{link-to "New Goal" 'goals.new'}}</button> <button {{action "showFinishedGoals"}} class="btn btn-default">Finished Goals</button>
+  <button class="btn btn-default" {{action 'newGoal'}}>New Goal</button> <button {{action "showFinishedGoals"}} class="btn btn-default">Finished Goals</button>
 
 <br> <br>
 
