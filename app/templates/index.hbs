@@ -8,8 +8,8 @@
     {{/unless}}
 
     {{#if session.isAuthenticated}}
-      <button class="btn btn-default">{{link-to 'All Goals' 'goals'}}</button>
-      <button class="btn btn-default">{{link-to 'New Goal' 'goals.new'}}</button>
+      <button class="btn btn-default" {{action 'allGoals'}}>All Goals</button>
+      <button class="btn btn-default" {{action 'newGoal'}}>New Goal</button>
     {{/if}}
 
   </div>
