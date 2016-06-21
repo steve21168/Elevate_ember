@@ -52,7 +52,7 @@ export default Ember.Controller.extend({
       this.transitionToRoute('goals')
     },
     delete(model) {
-      var remove = confirm(`Are you sure you want to delete this goal?`)
+      var remove = confirm(`Pain is temporary. Quitting lasts forever. Are you sure you want to delete this goal?`)
       if (remove) {
         model.destroyRecord().then(function() {
           this.transitionToRoute('goals');
