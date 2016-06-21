@@ -8,13 +8,17 @@
 
   <br><br>
 
-  <button class="btn btn-default" {{action "addListInput"}}> Create List Item </button> <br><br>
+  <button class="btn btn-default" {{action "addListInput"}}> Add Task <strong>+</strong> </button> <br><br>
   {{#each listItems as |listItem|}}
     {{list-item item=listItem }}
   {{/each}}
 
   {{#if listItems}}
-    <button class="btn btn-default" {{action "removeListInput"}}> Remove List Item </button>
-    <button class="btn btn-default" {{action "saveItems"}}>Save items</button>
+  <br>
+    <button class="btn btn-default" {{action "removeListInput"}}> Remove Task </button>
+    <button class="btn btn-default" {{action "saveItems"}}>Save Tasks</button>
   {{/if}}
+<br> <br>
+  <button class="btn btn-default">{{link-to 'All goals' 'goals'}}</button>
+  <button class="btn btn-danger" {{action 'delete' model}}>Delete Goal</button>
 </div>

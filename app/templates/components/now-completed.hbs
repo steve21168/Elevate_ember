@@ -1,12 +1,12 @@
-<h3>Completed</h3>
+<h2>Completed</h2>
 <ul>
     {{#each listItems as |list-item|}}
       {{#unless list-item.isNew }}
         {{#if list-item.completed}}
           <li>
-            {{list-item.description}}
-            <div class="glyphicon glyphicon-ok" {{action "completed" list-item}}></div>
-            <div class="glyphicon glyphicon-trash" {{action "deleteItems" list-item}}></div>
+            <h4 class="completed">{{list-item.description}}
+            <div class="glyphicon glyphicon-ok-circle" {{action "completed" list-item}}></div>
+            <div class="glyphicon glyphicon-remove-circle" {{action "deleteItems" list-item}}></div></h4>
           </li>
         {{/if}}
       {{/unless}}

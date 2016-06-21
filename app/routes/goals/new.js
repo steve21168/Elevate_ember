@@ -14,6 +14,7 @@ export default Ember.Route.extend({
       let goal = this.modelFor(this.routeName)
       goal.save().then(() => {
         this.transitionTo('goals.goal', goal)
+        alert("May the odds be ever in your favor!")
       })
     }
   }

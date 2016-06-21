@@ -1,5 +1,5 @@
 <div class="center">
-
+  <h1 class="underline"><strong>My Goals</strong></h1>
   {{#each model as |goal|}}
     {{#unless goal.isNew }}
       {{#if goal.active}}
@@ -10,17 +10,17 @@
       {{/if}}
     {{/unless}}
   {{/each}}
-  <br>
-  {{link-to "New Goal" 'goals.new'}}
-  <br>
-  <button {{action "showFinishedGoals"}}>Finished Goals</button>
+  <br> <br>
+  <button class="btn btn-default">{{link-to "New Goal" 'goals.new'}}</button> <button {{action "showFinishedGoals"}} class="btn btn-default">Finished Goals</button>
+
+<br> <br>
 
   {{#if isCompleted }}
     {{#each model as |goal|}}
-      <br>
       {{#unless goal.active}}
-        {{goal.name}}
-        <div {{action "delete" goal}} class="glyphicon glyphicon-remove-circle">Delete</div>
+        <h4>{{goal.name}}
+        <div {{action "completeGoal" goal}} class="glyphicon glyphicon-ok-circle"></div>
+        <div {{action "delete" goal}} class="glyphicon glyphicon-remove-circle">Delete</div></h4>
       {{/unless}}
     {{/each}}
   {{/if}}
