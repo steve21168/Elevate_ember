@@ -6,6 +6,7 @@ export default Model.extend({
   name: attr('string'),
   startDate: attr(),
   endDate: attr(),
+  active: attr('boolean'),
   user: belongsTo('user'),
   listItems: hasMany('list-item')
 });
