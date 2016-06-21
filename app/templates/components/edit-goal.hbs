@@ -10,4 +10,8 @@
   <div class="glyphicon glyphicon-pencil" {{action 'edit' goal}}></div>
   <div class="glyphicon glyphicon-ok-circle" {{action 'completeGoal' goal}}></div>
   <div class="glyphicon glyphicon-remove-circle" {{action 'delete' goal}}></div>
+
+  <br>
+
+  start: {{format-dates goal.startDate}}  end: {{ format-dates goal.endDate}}
 {{/if}}
